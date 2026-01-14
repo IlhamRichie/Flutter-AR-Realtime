@@ -13,12 +13,14 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: ElevatedButton.icon(
+  onPressed: () {
+    // Navigasi ke halaman AR
+    Get.toNamed('/ar-view'); // Pastikan route ini sesuai sama yang di app_pages.dart
+  },
+  icon: Icon(Icons.view_in_ar),
+  label: Text("Buka Kamera AR"),
+)
     );
   }
 }
